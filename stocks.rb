@@ -53,39 +53,4 @@ for item in purchases
 end
 puts "Purchase Summary: #{purchase_summary}"
 
-=begin
-# Create new hash to hold stock info
-purchase_summary = Hash.new
-
-# Input stock info into hash by block with ticker as key
-for item in purchases
-    if purchase_summary.has_key?(item[0])
-        purchase_summary[item[0]].push([item[1]*item[3], item[2]])
-    else
-        stock_block = Array.new
-        stock_block.push([item[1]*item[3], item[2]])
-        purchase_summary[item[0]] = stock_block
-        puts "STOCK BLOCK #{stock_block}"
-    end
-end
-#puts purchase_summary
-
-# Print summary
-puts "Purchase Summary:"
-purchase_summary.each do |key, value|
-    output_string = "#{key} - "
-    value.each do |i|
-        output_string << "Purchase date: #{i[1]}, Value: $#{i[0]}; "
-    end
-
-    puts output_string
-end
-
-=end
-
-#shorter option for part 1
-#for purchase in purchases
-    #puts "#{stock_dict[purchase[0]]} - Total Stock Purchase: $#{purchase[1]*purchase[3]}" 
-#end
-
 	
